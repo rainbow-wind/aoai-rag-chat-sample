@@ -1,0 +1,28 @@
+###
+@FUNCTION_NAME=EventGridTrigger
+ 
+POST http://localhost:7071/runtime/webhooks/EventGrid?functionName=EventGridTrigger
+Content-Type: application/json
+aeg-event-type: Notification
+ 
+{
+  "id": "1",
+  "eventType": "Microsoft.Storage.BlobCreated",
+  "subject": "/blobServices/default/containers/rag-docs/blobs/test.pdf", 
+  "eventTime": "2024-08-11T17:02:19.6069787Z",
+  "data": {
+    "api": "PutBlob", 
+    "clientRequestId": "2168279a-2557-4782-a60d-bca035d23023", 
+    "requestId": "d7b8cabe-801e-001f-52df-ebf109000000", 
+    "eTag": "0x8DCB9F71B061CD3", 
+    "contentType": "application/pdf", 
+    "contentLength": 2381873, 
+    "blobType": "BlockBlob", 
+    "url": "https://storageragaoai.blob.core.windows.net/rag-docs/test.pdf", 
+    "sequencer": "00000000000000000000000000012F09000000000003ceb0", 
+    "storageDiagnostics": {
+      "batchId": "5e7b9236-0006-004c-00df-ebd23d000000"
+    }
+  },
+  "dataVersion": "1.0"
+}
